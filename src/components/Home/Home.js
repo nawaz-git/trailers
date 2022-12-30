@@ -45,6 +45,7 @@ const Home = () => {
         ></Movie >
       }))
 
+      console.log(arr);
       setTimeout(() => {
         length = getRowLength()
       })
@@ -53,8 +54,18 @@ const Home = () => {
   }, [])
 
   const handleClick = async (item) => {
+    console.log(item);
     let allmovies = []
-    let movie = { name: item.name, id: 'trailer' + item.id, flag: true, TrailerURL: item.TrailerURL, EventGenre: item.EventGenre, csCount: item.csCount, ImageUrl: item.ImageUrl }
+    let movie = {
+      name: item.name,
+      id: 'trailer' + item.id,
+      flag: true, TrailerURL: item.TrailerURL,
+      EventGenre: item.EventGenre,
+      csCount: item.csCount,
+      ImageUrl: item.ImageUrl,
+      EventLanguage: item.language
+    }
+    console.log(movie);
     allmovies = item.movies
     allmovies = allmovies.filter((e) => {
       return e.flag === undefined
@@ -80,7 +91,6 @@ const Home = () => {
       if (item.flag) {
         return <MovieTrailer trailername={item?.name} id={item?._id} handleClick={handleClick} TrailerURL={item?.TrailerURL}
           EventGenre={item?.EventGenre} csCount={item?.csCount} ImageUrl={item?.ImageUrl}
-
           language={item?.EventLanguage}
           key={'trailer' + item._id} />
       } else {
@@ -103,7 +113,7 @@ const Home = () => {
       setMovies(arr.map((item) => {
         return <Movie name={item?.EventTitle}
           ImageUrl={item?.EventImageUrl}
-          language={item?.EventLanguage}
+          EventLanguage={item?.EventLanguage}
           TrailerURL={item?.TrailerURL}
           id={item?._id}
           handleClick={handleClick}

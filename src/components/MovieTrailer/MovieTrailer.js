@@ -1,7 +1,8 @@
 import { React, useEffect } from 'react'
 import movieStyle from './MovieTrailer.module.css'
 
-const MovieTrailer = ({ trailername, _id, TrailerURL, EventGenre, csCount, ImageUrl }) => {
+const MovieTrailer = ({ trailername, _id, TrailerURL, EventGenre, csCount, ImageUrl, language }) => {
+    console.log(language);
     TrailerURL = TrailerURL.replace('watch?v=', 'embed/')
     useEffect(() => {
     }, []);
@@ -20,6 +21,9 @@ const MovieTrailer = ({ trailername, _id, TrailerURL, EventGenre, csCount, Image
             <div className={movieStyle.right} >
                 <div className={movieStyle.name}>
                     {trailername}
+                </div>
+                <div className={movieStyle.name}>
+                    {language}
                 </div>
             </div>
         </div>
