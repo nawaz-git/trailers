@@ -6,7 +6,6 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 const MovieTrailer = ({ trailername, _id, TrailerURL, ImageUrl, language, EventGenre, ShowDate, ratings }) => {
     TrailerURL = TrailerURL.replace('watch?v=', 'embed/')
     EventGenre = EventGenre.split('|')
-    console.log(EventGenre, ShowDate, ratings);
     useEffect(() => {
     }, []);
 
