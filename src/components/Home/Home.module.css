@@ -1,0 +1,14 @@
+.main {
+    background-color: #1c1c1c;
+    color: white;
+    min-height: 100vh;
+    min-height: 100vh;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+}
