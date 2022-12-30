@@ -1,0 +1,41 @@
+.main {
+    height: 250px;
+    margin: 20px;
+    flex: 190px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a9aad6;
+    cursor: pointer;
+    width: max-content;
+    flex-direction: column;
+    position: relative;
+}
+
+.icon {
+    font-size: 55px;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main span {
+    width: 100%;
+    font-family: Poppins;
+    font-size: 12px;
+    margin: 10px;
+    text-align: left;
+    padding: 0px 10px;
+}
+
+.name {
+    width: max-content;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        flex: 39% 0 0;
+    }
+}
