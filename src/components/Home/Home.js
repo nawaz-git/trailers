@@ -48,7 +48,6 @@ const Home = () => {
         ></Movie >
       }))
 
-      console.log(arr);
       setTimeout(() => {
         length = getRowLength()
       })
@@ -57,7 +56,6 @@ const Home = () => {
   }, [])
 
   const handleClick = async (item) => {
-    console.log(item);
     let allmovies = []
     let movie = {
       name: item.name,
@@ -70,7 +68,6 @@ const Home = () => {
       ShowDate: item.ShowDate,
       ratings: item.ratings
     }
-    console.log(movie);
     allmovies = item.movies
     allmovies = allmovies.filter((e) => {
       return e.flag === undefined
@@ -126,13 +123,31 @@ const Home = () => {
           EventLanguage={item?.EventLanguage}
           TrailerURL={item?.TrailerURL}
           id={item?._id}
+          EventGenre={item.EventGenre}
+          ShowDate={item.ShowDate}
+          ratings={item.ratings}
           handleClick={handleClick}
           movies={arr}
           key={item?._id}
         ></Movie >
       }))
     } else {
-      setMovies([])
+      let arr = []
+      arr = apiItems.map(item => item)
+      setMovies(arr.map((item) => {
+        return <Movie name={item?.EventTitle}
+          ImageUrl={item?.EventImageUrl}
+          EventLanguage={item?.EventLanguage}
+          TrailerURL={item?.TrailerURL}
+          id={item?._id}
+          EventGenre={item.EventGenre}
+          ShowDate={item.ShowDate}
+          ratings={item.ratings}
+          handleClick={handleClick}
+          movies={arr}
+          key={item?._id}
+        ></Movie >
+      }))
     }
   }
 

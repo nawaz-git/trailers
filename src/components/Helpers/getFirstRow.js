@@ -23,7 +23,6 @@ const getFirstItemofRow = (number, rowLength, totalLength) => {
         if (number > item) {
             value = item
         } else if (number == item) {
-            console.log(number, item);
             value = number
         }
         else {
