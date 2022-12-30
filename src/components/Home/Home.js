@@ -38,6 +38,9 @@ const Home = () => {
           ImageUrl={item?.EventImageUrl}
           TrailerURL={item?.TrailerURL}
           language={item?.EventLanguage}
+          EventGenre={item.EventGenre}
+          ShowDate={item.ShowDate}
+          ratings={item.ratings}
           id={item?._id}
           handleClick={handleClick}
           movies={arr}
@@ -61,9 +64,11 @@ const Home = () => {
       id: 'trailer' + item.id,
       flag: true, TrailerURL: item.TrailerURL,
       EventGenre: item.EventGenre,
-      csCount: item.csCount,
       ImageUrl: item.ImageUrl,
-      EventLanguage: item.language
+      EventLanguage: item.language,
+      EventGenre: item.EventGenre,
+      ShowDate: item.ShowDate,
+      ratings: item.ratings
     }
     console.log(movie);
     allmovies = item.movies
@@ -90,13 +95,18 @@ const Home = () => {
     setMovies(allmovies.map((item) => {
       if (item.flag) {
         return <MovieTrailer trailername={item?.name} id={item?._id} handleClick={handleClick} TrailerURL={item?.TrailerURL}
-          EventGenre={item?.EventGenre} csCount={item?.csCount} ImageUrl={item?.ImageUrl}
-          language={item?.EventLanguage}
+          ImageUrl={item?.ImageUrl}
+          language={item?.EventLanguage} EventGenre={item.EventGenre}
+          ShowDate={item.ShowDate}
+          ratings={item.ratings}
           key={'trailer' + item._id} />
       } else {
         return <Movie name={item?.EventTitle} ImageUrl={item?.EventImageUrl} id={item?._id} handleClick={handleClick}
           TrailerURL={item?.TrailerURL}
           language={item?.EventLanguage}
+          EventGenre={item.EventGenre}
+          ShowDate={item.ShowDate}
+          ratings={item.ratings}
           key={item._id} movies={allmovies} />
       }
     }))

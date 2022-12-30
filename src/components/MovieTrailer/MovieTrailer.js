@@ -1,9 +1,10 @@
 import { React, useEffect } from 'react'
 import movieStyle from './MovieTrailer.module.css'
 
-const MovieTrailer = ({ trailername, _id, TrailerURL, EventGenre, csCount, ImageUrl, language }) => {
-    console.log(language);
+const MovieTrailer = ({ trailername, _id, TrailerURL, ImageUrl, language, EventGenre, ShowDate, ratings }) => {
     TrailerURL = TrailerURL.replace('watch?v=', 'embed/')
+    EventGenre = EventGenre.split('|')
+    console.log(EventGenre, ShowDate, ratings);
     useEffect(() => {
     }, []);
 
@@ -24,6 +25,12 @@ const MovieTrailer = ({ trailername, _id, TrailerURL, EventGenre, csCount, Image
                 </div>
                 <div className={movieStyle.language}>
                     {language}
+                </div>
+                <div className={movieStyle.genres}>
+                    {EventGenre.map(genre => <div className={movieStyle.genre}>
+                        {genre}
+                    </div>)}
+
                 </div>
             </div>
         </div>

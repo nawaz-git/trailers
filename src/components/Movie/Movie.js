@@ -5,7 +5,7 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import NoImage from '../../assets/No-Image.png'
 
 
-const Movie = ({ name, ImageUrl, id, handleClick, movies, TrailerURL, language }) => {
+const Movie = ({ name, ImageUrl, id, handleClick, movies, TrailerURL, language, EventGenre, ShowDate, ratings }) => {
     const [img, setImg] = useState(ImageUrl)
 
     const handleError = (err) => {
@@ -14,7 +14,7 @@ const Movie = ({ name, ImageUrl, id, handleClick, movies, TrailerURL, language }
 
     return (
         <>
-            <div className={movieStyle.main} onClick={() => handleClick({ name, ImageUrl, id, movies, TrailerURL, language })}>
+            <div className={movieStyle.main} onClick={() => handleClick({ name, ImageUrl, id, movies, TrailerURL, language, EventGenre, ShowDate, ratings })}>
                 {img ? <img src={img} onError={handleError}></img> : undefined}
                 <span className={movieStyle.name}>{name}</span>
                 {(!img) ? <PlayCircleOutlineIcon className={movieStyle.icon} /> : undefined}
