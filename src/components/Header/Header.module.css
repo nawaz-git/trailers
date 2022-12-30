@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+.main {
+    width: 100%;
+    height: 15vh;
+    background-color: #1c1c1c;
+}
+
+.top {
+    height: 70px;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom {
+    font-family: Poppins;
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.filter {
+    width: max-content;
+    background-color: #333333;
+    color: #737373;
+    padding: 5px 20px;
+    font-size: 14px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-title {
+    width: max-content;
+}
+
+.bottom span {
+    font-size: 16px;
+    color: #737373;
+}
+
+.left {
+    width: 50% !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right {
+    width: 50% !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0px 30px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    background-color: transparent;
+    border: 1px solid #00c992;
+    padding: 10px;
+    border-radius: 5px;
+    color: #00c992;
+    width: 150px;
+    background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%2300c992' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+    background-position: calc(100% - 0.75rem) center !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    padding-right: 2rem !important;
+    margin: 0px 15px;
+}
+
+.filters select:focus {
+    border: 1px solid #00c992;
+    outline: 1px solid #00c992;
+}
+
+.logo {
+    width: 20%;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding: 0px 20px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.types button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px 10px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    width: 150px;
+}
+
+.types {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.active button {
+    background: #00c992;
+}
+
+.btn button {
+    background: #00c992;
+}
+
+@media only screen and (max-width: 600px) {
+    .filters {
+        display: none;
+    }
+
+    .types button {
+        width: 150px;
+    }
+
+    .top {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    .types {
+        width: 70%;
+    }
+
+    .right {
+        display: none;
+        width: 50%;
+    }
+}
