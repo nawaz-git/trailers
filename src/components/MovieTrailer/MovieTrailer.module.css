@@ -16,23 +16,27 @@
 
 .right {
     background-color: transparent;
-    text-align: center;
     width: 50%;
     display: flex;
     height: 100%;
     padding: 0px 20px;
-    font-size: 20px;
     background: rgba(255, 255, 255, 0.034);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(50px);
+    flex-direction: column;
 
 }
 
-.right:hover {
-    transform: translate(-10px, -10px);
+.language {
+    text-align: left;
+    font-size: 16px;
 }
 
 .name {
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    font-weight: 600;
     font-family: Poppins;
-    margin: 20px 0px;
+    margin: 20px 0px 10px 0px;
 }

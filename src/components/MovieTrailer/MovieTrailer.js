@@ -22,7 +22,7 @@ const MovieTrailer = ({ trailername, _id, TrailerURL, EventGenre, csCount, Image
                 <div className={movieStyle.name}>
                     {trailername}
                 </div>
-                <div className={movieStyle.name}>
+                <div className={movieStyle.language}>
                     {language}
                 </div>
             </div>
