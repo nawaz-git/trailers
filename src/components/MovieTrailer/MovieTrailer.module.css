@@ -1,0 +1,38 @@
+.main {
+    height: 450px;
+    margin: 20px;
+    flex: 100% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a9aad6;
+    cursor: pointer;
+    background-image: url('/src/assets/logo.png');
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    background-color: transparent;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    height: 100%;
+    padding: 0px 20px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+
+}
+
+.right:hover {
+    transform: translate(-10px, -10px);
+}
+
+.name {
+    font-family: Poppins;
+    margin: 20px 0px;
+}
