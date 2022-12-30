@@ -55,3 +55,40 @@
     margin: 0px 05px;
     font-size: 14px;
 }
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.statscount {
+    display: flex;
+    flex-direction: column;
+}
+
+.upvotes {
+    display: flex;
+    flex-direction: column;
+}
+
+.upcount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.perc {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.desc{
+    margin: 20px 0px;
+}
