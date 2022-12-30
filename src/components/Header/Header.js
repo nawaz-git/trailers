@@ -1,8 +1,6 @@
 import { React, useState, useEffect } from 'react'
 import styles from './Header.module.css'
 import CloseIcon from '@mui/icons-material/Close';
-import axios from 'axios';
-
 
 const Header = ({ list, filterChanged }) => {
   const [comingsoon, setcomingsoon] = useState(true)
@@ -38,6 +36,7 @@ const Header = ({ list, filterChanged }) => {
                 <option>Fresh</option>
               </select>
               <select onChange={handleChange}>
+                <option>All Languages</option>
                 {list.map(item => {
                   return <option value={item}>{item}</option>
                 })
